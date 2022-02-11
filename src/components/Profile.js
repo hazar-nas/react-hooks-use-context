@@ -1,10 +1,12 @@
 import React,{useContext} from "react";
 import { UserContext } from "../context/user";
+
 import Interests from "./Interests";
 
 function Profile() {
 
-  const { user,theme } = useContext(UserContext);
+  const { user } = useContext(UserContext);
+ 
 
   // now, we can use the user object just like
   // we would if it was passed as a prop!
@@ -13,7 +15,7 @@ function Profile() {
   return (
     <div>
       <h2>{user.name}'s Profile</h2>
-      <Interests interests={user.interests} theme={theme} />
+      <Interests   />
     </div>
   );
 }
